@@ -1,8 +1,5 @@
 # Flask-Todolist
 
-[![Licença][license-image]][license-url]  
-[![Status de Build][travis-image]][travis-url]
-
 Flask-Todolist é uma aplicação web simples de lista de tarefas, construída com o framework **Flask** em **Python**. A aplicação possui os recursos básicos de autenticação (contas/login), uma API e uma interface de usuário (UI) interativa.
 
 ---
@@ -37,26 +34,27 @@ Com o uso do `docker-compose`, você pode rodar a aplicação facilmente:
 ```bash
 docker-compose build
 docker-compose up
-
+```
 A aplicação estará disponível em http://localhost:8000/.
 
 (Ela está rodando com gunicorn, que é utilizado para deploy, ao invés de usar flask run diretamente.)
 
-Manualmente
+### Manualmente
 Se preferir rodar localmente na sua máquina, recomendo o uso do venv.
 
-bash
-Copiar código
+```bash
 pip install -r requirements.txt
 FLASK_APP=todolist.py flask run
+```
+
 Para adicionar alguns dados de exemplo, rode:
 
-bash
-Copiar código
+```bash
 pip install -r test-requirements.txt
 flask fill-db
-Agora, você pode explorar a API:
+```
 
+Agora, você pode explorar a API:
 http://localhost:5000/api/users
 
 Escolha um usuário, faça login com as credenciais fornecidas. A senha padrão após rodar fill-db é correcthorsebatterystaple.
