@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+<section class="header">
+  <h2 class="title">Login</h2>
+  <div class="row">
+    <div class="three columns value-prop"></div>
+    <div class="six columns">
+      {% if form.errors %}
+        <div class="has-error"><strong>Não consegue se logar. tipo?</strong></div>
+      {% endif %}
+      <form method=post>
+        {{ form.hidden_tag() }}
+        <dl>
+          <dd>{{ form.email_or_username(class_="u-full-width", placeholder="Email or Username", maxlength=128)}}
+          <dd>{{ form.password(class_="u-full-width", placeholder="Password") }}
+          <dt>{{ form.submit }}
+        </dl>
+      </form>
+      <p>Novo usuario? <a href="{{ url_for('auth.register') }}">Aperte aqui para se registrar.</a>.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
