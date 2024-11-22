@@ -20,9 +20,6 @@ Flask-Todolist é uma aplicação web simples de lista de tarefas, construída c
 CSS | [Skeleton](http://getskeleton.com/)  
 JS  | [jQuery](https://jquery.com/)
 
-Eu também desenvolvi um aplicativo semelhante usando **Django**:  
-https://github.com/rtzll/django-todolist
-
 ---
 
 ## Explore  
